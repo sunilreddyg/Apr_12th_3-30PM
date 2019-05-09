@@ -1,0 +1,50 @@
+Identify a link at webpage using backend htmlsource:-->
+
+	 Note:--> Every link contains anchor tag at backend htmlsource
+
+	 link htmlsource:-->
+		
+		<a href="http://jobs.com/createjob/">  New job  </a>
+=======================================================================================
+
+	 Note:--> only links to operate webdriver have two default locators called
+				[linktext  And  partiallinktext]
+
+		linktext        => identification of link with original linkname
+		Partiallinktext => identification of link with original or partial linkname
+
+
+	Note:--> Every link contains href as unique attribute, Using xpath and cssSelector
+		 we can use href attribute as unique identification incase linktext and
+		 partial linktext doesn't work..
+
+
+
+
+========================================================================================
+Example:--> Identification of link with original linkname
+
+HtmlSource:-->
+
+	   <a href="http://jobs.com/createjob/">New job</a>
+
+
+	   driver.findElement(By.Linktext("New job")).click()
+
+
+
+=========================================================================================
+Example:--> Identification of link with partial linkname
+
+
+	    <a href="http://jobs.com/createrole/">
+		<strong> Automation Tester </strong>
+		<span> Delhi </span>	
+	    </a>
+
+
+	   driver.findElement(BY.Partialinktext("Automation Tester")).click();
+=========================================================================================
+
+
+
