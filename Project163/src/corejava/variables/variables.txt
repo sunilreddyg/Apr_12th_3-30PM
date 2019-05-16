@@ -1,0 +1,247 @@
+Variable:-->
+
+	Variable is temparory location to store value
+
+	in Variable, value can be store according data types only
+
+Datatype:--->
+
+	Same as other programming languages Java also allow datatype to 
+	store values
+
+	Datatype define what value to store into variable
+
+	
+	premtives datatypes:--->
+
+	byte
+	short
+	int
+	char
+	boolean
+	double
+	float
+
+
+	Byte:---> 8 bit
+		Byte is a integer data type 
+		it allow max value 127
+		it allow min value -127
+
+		byte days=127;
+
+	short:--->16 bit
+
+		short is a integer datatype
+		
+		shot sal=1000;
+
+	int:---->32 bit
+		int is a integer datatypes
+		
+		int phonenumber=983739390;
+
+	long:---->64 bit
+		long is a integer datatype
+		
+		long amount=127686868698;
+
+	char:---> single character with in single codes
+
+		char group='A';
+
+	boolean:--> Boolean return true or false
+
+		boolean flag=false;
+		boolean flag1=true;
+		
+		default boolean return type is false
+
+
+How to store value in non premetive datatype:?----->
+
+	Syntax to store String values:--->
+
+			String email="sunireddy.gajjala@gmail.com";
+			String name="sunil";
+
+How to define Variable:-->
+
+	* Don't include space between variable	-->  String user_name="Ajay";
+	* Don't Start with Numeric
+
+
+------------------------------------->>>
+
+What types of variables available in Java?...>
+
+	
+	1.Local Variable
+	2.Instant variable
+	3.Class Variable
+
+
+1.Local Variable:--->
+
+	These variables define inside method, it can't share inforamtion
+	to other methods also for  other classes
+	When method closed data will be erased
+
+
+
+	Syntax:--->
+
+		public class Phone
+		{
+	
+			void Landphone()
+			{
+				int price=100;
+				system.out.println(price);
+			}
+
+			void mobile()
+			{
+
+				system.out.println(price);
+			//local variable can't share information to other methods
+					
+			}
+
+		}
+
+
+
+	Syntax:--->Real Application  (Local Variable)
+
+		public Hotmailhomepage
+		{
+
+			void launchApplication()
+			{
+
+				WebDriver driver=new firefoxDriver();
+				driver.get("http://hotmail.com");
+				driver.manage().window().maximize();
+
+			}
+
+
+			void signin()
+			{
+
+				//WebDriver method we can't access because 
+				we define webdriver interface locally
+		
+	
+			}
+		
+		}
+
+
+
+		
+------------------------------------------------------------->>>>
+
+
+
+Instant Variable:---->
+
+		Instant Variable Define Inside the class but outside the 
+		method , these variable can access across method and classes
+
+	Note:--. We should create object to access instant variable from outside class
+		
+		==>Object creation to access instant variable
+			classname ref=new classname();
+			ref.variablename;
+
+	Syntax:--->
+
+		public Phone
+		{
+			public int price=100;
+	
+			void Landphone()
+			{
+				system.out.println(price);
+				//Variable information can be used 
+			}
+
+			void mobile()
+			{
+
+				system.out.println(price);
+				//Variable Inforamtion can be used 
+			}
+		}
+
+
+
+
+
+
+----------------------------------------------------------------
+
+	Syntax:--->Real Application  (Instant Variable Example)
+
+		public Hotmailhomepage
+		{
+			public WebDriver driver;
+
+			void launchApplication()
+			{
+
+				driver=new firefoxDriver();
+				driver.get("http://hotmail.com");
+				driver.manage().window().maximize();
+			}
+
+			void signin()
+			{
+				//webdriver controls we receive because
+				//Webdriver class initiated as global
+
+				driver.findElement(By.id("i0112"));
+				driver.getTitle();
+		
+			}
+		
+		}
+
+
+-------------------------------------------------------->>>
+
+
+Class Variable:--->
+
+	These variable define inside the class, out side method same
+	as instant variable. only difference class variable define
+	along with Static Keyword
+
+	Note:--> static variable to access outside class no need of object creation
+		===> Static variable to access from differnet class
+				classname.variablename;
+
+
+	Example:--> outside class variable information to use
+	Syntax:"------->  classname.variablename;
+		
+	public Phone
+		{
+			public static int price=100;
+	
+			void static Landphones
+			{
+				system.out.println(price);
+				//Variable information can be used 
+			}
+
+			void static mobile
+			{
+
+				system.out.println(price);
+				//Variable Inforamtion can be used 
+			}
+		}
+

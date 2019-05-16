@@ -1,0 +1,41 @@
+GetCommands:-->
+
+		  In Selenium all get commands capture application original 
+		  behaviour.By capture original behaviour we can validate with 
+		  expected behaviour to prove testcases pass/fail..
+		  
+		  => Also knows as verification commands or Runtime commands
+		  			1. Page verification commands
+		  			2. Element verification commands
+		  			
+1. Page verification commands:-->
+
+		These commands validate page behaviour. [Availability of page]
+		
+				1. GetTitle
+				2. GetCurrentUrl
+				3. GetpageSource
+				4. GetWindowHandle
+				5. GetWindowHandles  
+				
+				
+2. Element verification commands:-->
+		These commands capture individual element behaviour like.
+				1. Gettext
+				2. GetAttribute
+				3. GetCssvalue
+				4. GetTagname
+				5. GetSize
+				6. GetLocation
+				7. GetRect
+=====================================================================>>	
+			
+			
+			
+			
+			
+			
+			
+			
+				
+				
