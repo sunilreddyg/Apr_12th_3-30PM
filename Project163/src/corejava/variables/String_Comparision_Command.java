@@ -69,6 +69,11 @@ public class String_Comparision_Command {
 		 String Sub1=AccountNum.substring(5, 9);
 		 System.out.println("String middle characters is => "+Sub1);
 
+		 
+		 
+		 
+		 
+		 
 	}
 
 }

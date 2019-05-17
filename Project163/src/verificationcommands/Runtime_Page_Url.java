@@ -35,7 +35,15 @@ public class Runtime_Page_Url
 		System.out.println("Currnet window url is => "+Runtime_url);
 		
 		
-		
+		//Write Decision statement to accept on expected url presented
+		if(Runtime_url.contains("download/"))
+		{
+			System.out.println("Expected url presented for download page");
+		}
+		else
+		{
+			System.out.println("Url Mismatch for download page");
+		}
 		
 
 

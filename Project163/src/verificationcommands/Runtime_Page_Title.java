@@ -1,6 +1,8 @@
 package verificationcommands;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Runtime_Page_Title 
@@ -40,9 +42,24 @@ public class Runtime_Page_Title
 		String Exp_title="Selenium - Web Browser Automation";
 		
 		
+		//Verify equal comparision between two strings
+		boolean flag=Runtime_title.equals(Exp_title);
+		System.out.println("Selenium hq homepage title is => "+flag);
 		
 		
-		
+		//Write Decision statement to continue execution on expected title presented
+		if(flag)
+		{
+			System.out.println("Expected title presented at current window");
+			WebElement Search_Editbox=driver.findElement(By.id("q"));
+			Search_Editbox.clear();
+			Search_Editbox.sendKeys("Automated");
+			
+		}
+		else
+		{
+			System.out.println("Expected title not verified at seleniumHQ homepage");
+		}
 		
 		
 		
