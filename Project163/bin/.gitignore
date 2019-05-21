@@ -1,3 +1,6 @@
-/webdriver_locators/
+/browser_launch/
 /corejava/
+/run_from_diff_package/
+/selenium_webdriver/
 /verificationcommands/
+/webdriver_locators/
