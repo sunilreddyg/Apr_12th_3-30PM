@@ -1,0 +1,91 @@
+package switch_commands;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SwitchTo_Alert {
+
+	public static void main(String[] args) throws Exception 
+	{
+		
+		
+		/*
+		 * Scenario:-->  Verify Job Search with improper details..
+		 * 
+		 * 			Given url https://www.firstnaukri.com/
+		 * 			when Click Search button without enter Course and keyword entry
+		 * 			then system should respond with approriate error message.
+		 */
+		
+		
+		//browser initiation
+		System.setProperty("webdriver.chrome.driver", "D:\\drivers\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.firstnaukri.com/");
+		driver.manage().window().maximize();
+		
+		//Identify search button
+		WebElement Search_btn=driver.findElement(By.xpath("//input[@value='Search']"));
+		Search_btn.click();    //Without Enter appropriate details..
+		Thread.sleep(5000);
+		
+		
+		Alert alert=driver.switchTo().alert();
+		
+		//Get Text on alert popup
+		String alert_text=alert.getText();
+		System.out.println("popup contains text => "+alert_text);
+		
+		
+		//Close browser window by click OK button
+		alert.accept();
+		
+		
+		
+		/*
+		 * Alert exceptions in WebDriver:-->
+		 * 
+		 * UnhandledAlertException:-->
+		 * 			Incase we continue script execution without close alert window..
+		 * 
+		 * NoAlertPresentedException:-->
+		 * 			We design script to handle alert window but unexpected alert was not presented at webpage
+		 */
+		
+		
+		/*
+		 * How to find alert at webpage:-->
+		 * 		1. On alert Context menu will be disabled [you can't right click on alert]
+		 * 		2. Using alert exception [unhandledalert and  Noalertpresented exceptions]
+		 */
+		
+		
+		
+		
+		/*
+		 * ==> Capture text on alert window
+		 * 
+		 * 			driver.switchTo().alert().getText();
+		 * 
+		 * ==> Accept popup window    [It close alert window]
+		 * 	
+		 * 			driver.switchTo().alert().accept();
+		 * 
+		 * ==> Dismiss alert window   [It close alert window]
+		 * 
+		 * 			driver.switchTo().alert().dismiss();
+		 * 
+		 * ==> Send text to popup-window  [Prompt window]
+		 * 
+		 * 			driver.switchTo().alert().sendkeys("text");
+		 */
+		
+		
+		
+
+	}
+
+}
