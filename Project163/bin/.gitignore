@@ -1,9 +1,9 @@
-/browser_launch/
+/capture_screen/
 /corejava/
+/mouse_and_keyword_interactions/
 /run_from_diff_package/
 /selenium_webdriver/
+/switch_commands/
+/ui_validation_Commands/
 /verificationcommands/
 /webdriver_locators/
-/ui_validation_Commands/
-/switch_commands/
-/mouse_and_keyword_interactions/
