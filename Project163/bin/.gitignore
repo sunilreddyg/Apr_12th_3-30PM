@@ -1,10 +1,12 @@
-/capture_screen/
-/corejava/
-/mouse_and_keyword_interactions/
-/run_from_diff_package/
 /selenium_webdriver/
 /switch_commands/
 /ui_validation_Commands/
 /verificationcommands/
+/browser_launch/
+/capture_screen/
+/corejava/
+/mouse_and_keyword_interactions/
+/run_from_diff_package/
+/waitcommands/
 /webdriver_locators/
 /robot_actions/
