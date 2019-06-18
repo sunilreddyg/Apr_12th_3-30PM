@@ -1,6 +1,7 @@
 package corejava.loops;
 
-public class do_while {
+public class do_while 
+{
 
 	public static void main(String[] args)
 	{
