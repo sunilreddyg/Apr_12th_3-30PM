@@ -1,0 +1,13 @@
+
+
+Switch to Alert:-->   [Webdriver had partial support to handle alerts]
+
+	driver.switchTo().alert().accept();
+
+Switch to Frame:--> [Frame we can find at hmtl source and we can find Frames with unique ID's]	
+
+	driver.switchto().Frame("FrameName/ID");
+
+Switch to Windows:--> [Using window dynamic ID's we can switch]
+
+	driver.switchTo().window("?????");
