@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="framework_testng.Assert_Reports">
+      <class name="framework_testng.DP.Get_DataProvider_From_Diff_Class">
         <methods>
-          <include name="tc001"/>
+          <include name="tc002"/>
         </methods>
-      </class> <!-- framework_testng.Assert_Reports -->
+      </class> <!-- framework_testng.DP.Get_DataProvider_From_Diff_Class -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -113,32 +113,7 @@ belonging to the classes inside the <test> tag have run.
 
 @BeforeMethod: The annotated method will be run before each test method.
 
-@AfterMethod: The annotated method will be run after each test method. 
-
-
------------------------------------------------------------------------------------------------->
-Running Testng classes from suite file:--->
-
-
-Creation of XML file:--->
-
-	Right click on project--->New---->Click Others
-	Select XML File---> EnterFilename with extension click on finish
-
-	Select source tab in XML file
-
-
-<suite name="sutie1">
-	<test name="test1">
-		<classes>
-			<class name="packagename.classname"></class>
-		</classes>
-	</test>
-</suite>
-
-
-Run Suite File:--->
-		Right click on suite file---->Run as ---->  TestNg Suite 
+@AfterMethod: The annotated method will be run after each test method.
 
 -------------------------------------------------------------------------------------------->
 How to prioritize test methods with in testng class:--->
@@ -222,8 +197,33 @@ Assert:-->
 
 	Assert Statement send report to EmailableReports on Failure,
 	On success manually we need to define using Reporter.log option.
+	
+======================================================================>
+Running Testng classes from suite file:--->
 
-================How to Assign groups to TestNg  test=========
+
+Creation of XML file:--->
+
+	Right click on project--->New---->Click Others
+	Select XML File---> EnterFilename with extension click on finish
+
+	Select source tab in XML file
+
+
+<suite name="sutie1">
+	<test name="test1" verbose="2>
+		<classes>
+			<class name="packagename.classname"></class>
+		</classes>
+	</test>
+</suite>
+
+
+Run Suite File:--->
+		Right click on suite file---->Run as ---->  TestNg Suite 
+
+
+================How to Assign groups to TestNg test=========
 
 @Test(groups="groupname")                        ==> Test assigning to single groups
 
@@ -240,7 +240,7 @@ Assert:-->
 	</groups>
 
 
----------------------------------How to Pass parameter from XML file-------------->>
+-----How to Pass parameter from XML file-------------->>
 
 <suite name="sutie1" >
        <test name="test1">
@@ -384,55 +384,3 @@ public void (String var,String var)
 {
 
 }
-
-===============================================================>
-Test Listeners:-->
-
-	There are several interfaces that allow you to modify TestNG's behavior. 
-	These interfaces are broadly called "TestNG Listeners". 
-	Here are a few listeners: 
-
-
-    	IAnnotationTransformer
-    	IAnnotationTransformer2 
-    	IHookable 
-    	IInvokedMethodListener 
-    	IMethodInterceptor 
-    	IReporter 
-    	ISuiteListener 
-    	ITestListener     --->Testers use test listeners...
-
-	--------Events to listen under ItestListeners------
-
-onFinish(ITestContext context)
-	Invoked after all the tests have run and all their Configuration 
-	methods have been called.
-
-
-onStart(ITestContext context)
-	Invoked after the test class is instantiated and before any 
-	configuration method is called.
-
-onTestFailedButWithinSuccessPercentage(ITestResult result)
-	Invoked each time a method fails but has been annotated 
-	with successPercentage and this failure still keeps 
-	it within the success percentage requested.
-
-
-onTestFailure(ITestResult result)
-	Invoked each time a test fails.
-
-onTestSkipped(ITestResult result)
-	Invoked each time a test is skipped.
-
-onTestStart(ITestResult result)
-	Invoked each time before a test will be invoked.
-
-onTestSuccess(ITestResult result)
-Invoked each time a test succeeds.
-
-===============================================>>>
-
-
-
-

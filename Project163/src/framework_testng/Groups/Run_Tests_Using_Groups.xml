@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="default">
+
+	<groups>
+		<run>	
+			<include name="G3"></include>
+		</run>
+	</groups>
+
+
+
+	<test name="test1" verbose="2">
+		<classes>
+			<class name="framework_testng.Groups.Class1"></class>
+			<class name="framework_testng.Groups.Class2"></class>
+			<class name="framework_testng.Groups.Class3"></class>
+		</classes>
+	</test>
+	
+</suite>
